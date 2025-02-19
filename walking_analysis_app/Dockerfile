@@ -5,9 +5,10 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # 必要なシステムパッケージのインストール
-# OpenCV の動作に必要なライブラリを追加
+# OpenCV の動作に必要な OpenGL 関連ライブラリをすべて追加
 RUN apt-get update && \
-    apt-get install -y libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender1 && \
+    apt-get install -y libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender1 \
+                       mesa-utils libgl1-mesa-dri && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
