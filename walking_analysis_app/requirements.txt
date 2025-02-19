@@ -63,7 +63,7 @@ multidict==6.1.0
 narwhals==1.26.0
 numpy==1.26.4
 openai==1.63.2
-opencv-python-headless==4.11.0.86
+opencv-python-headless==4.5.5.64
 opt_einsum==3.4.0
 packaging==24.2
 pandas==2.2.3
